@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ClassGap – Skill Gap Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>ClassGap</h1>
+  <p class="subtitle">Skill Gap Analyzer with Roadmap</p>
+
+  <div class="card">
+    <input id="name" placeholder="Student Name">
+
+    <select id="jobRole">
+      <option value="">Select Job Role</option>
+      <option value="data_analyst">Data Analyst</option>
+      <option value="web_dev">Web Developer</option>
+      <option value="software_eng">Software Engineer</option>
+      <option value="ml_eng">ML Engineer</option>
+    </select>
+
+    <h3>Technical Skills (%)</h3>
+
+    <label>Python <span id="pythonVal">0%</span></label>
+    <input type="range" id="python" min="0" max="100" oninput="showVal('python')">
+
+    <label>SQL <span id="sqlVal">0%</span></label>
+    <input type="range" id="sql" min="0" max="100" oninput="showVal('sql')">
+
+    <label>Machine Learning <span id="mlVal">0%</span></label>
+    <input type="range" id="ml" min="0" max="100" oninput="showVal('ml')">
+
+    <label>HTML <span id="htmlVal">0%</span></label>
+    <input type="range" id="html" min="0" max="100" oninput="showVal('html')">
+
+    <label>CSS <span id="cssVal">0%</span></label>
+    <input type="range" id="css" min="0" max="100" oninput="showVal('css')">
+
+    <label>JavaScript <span id="jsVal">0%</span></label>
+    <input type="range" id="js" min="0" max="100" oninput="showVal('js')">
+
+    <label>Java <span id="javaVal">0%</span></label>
+    <input type="range" id="java" min="0" max="100" oninput="showVal('java')">
+
+    <label>DSA <span id="dsaVal">0%</span></label>
+    <input type="range" id="dsa" min="0" max="100" oninput="showVal('dsa')">
+
+    <h3>Soft Skills (%)</h3>
+
+    <label>Communication <span id="communicationVal">0%</span></label>
+    <input type="range" id="communication" min="0" max="100" oninput="showVal('communication')">
+
+    <label>Teamwork <span id="teamworkVal">0%</span></label>
+    <input type="range" id="teamwork" min="0" max="100" oninput="showVal('teamwork')">
+
+    <label>Problem Solving <span id="problemSolvingVal">0%</span></label>
+    <input type="range" id="problemSolving" min="0" max="100" oninput="showVal('problemSolving')">
+
+    <button onclick="analyze()">Analyze Skill Gap</button>
+  </div>
+
+  <div id="result" class="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
